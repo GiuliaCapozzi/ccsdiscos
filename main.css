@@ -1,0 +1,334 @@
+body {
+  margin: 0;
+}
+
+main {
+  margin-top: 100px;
+}
+
+@font-face {
+  font-family: "Arimo";
+  src: url("fonts/Arimo-Italic.eot");
+  src: url("fonts/Arimo-Italic.eot?#iefix") format("embedded-opentype"), url("fonts/Arimo-Italic.woff2") format("woff2"), url("fonts/Arimo-Italic.woff") format("woff"), url("fonts/Arimo-Italic.ttf") format("truetype"), url("fonts/Arimo-Italic.svg#Arimo-Italic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arimo";
+  src: url("fonts/Arimo-Regular.eot");
+  src: url("fonts/Arimo-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/Arimo-Regular.woff2") format("woff2"), url("fonts/Arimo-Regular.woff") format("woff"), url("fonts/Arimo-Regular.ttf") format("truetype"), url("fonts/Arimo-Regular.svg#Arimo-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aleo";
+  src: url("fonts/Aleo-Italic.eot");
+  src: url("fonts/Aleo-Italic.eot?#iefix") format("embedded-opentype"), url("fonts/Aleo-Italic.woff2") format("woff2"), url("fonts/Aleo-Italic.woff") format("woff"), url("fonts/Aleo-Italic.ttf") format("truetype"), url("fonts/Aleo-Italic.svg#Aleo-Italic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aleo";
+  src: url("fonts/Aleo-LightItalic.eot");
+  src: url("fonts/Aleo-LightItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Aleo-LightItalic.woff2") format("woff2"), url("fonts/Aleo-LightItalic.woff") format("woff"), url("fonts/Aleo-LightItalic.ttf") format("truetype"), url("fonts/Aleo-LightItalic.svg#Aleo-LightItalic") format("svg");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aleo";
+  src: url("fonts/Aleo-Bold.eot");
+  src: url("fonts/Aleo-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/Aleo-Bold.woff2") format("woff2"), url("fonts/Aleo-Bold.woff") format("woff"), url("fonts/Aleo-Bold.ttf") format("truetype"), url("fonts/Aleo-Bold.svg#Aleo-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aleo";
+  src: url("fonts/Aleo-BoldItalic.eot");
+  src: url("fonts/Aleo-BoldItalic.eot?#iefix") format("embedded-opentype"), url("fonts/Aleo-BoldItalic.woff2") format("woff2"), url("fonts/Aleo-BoldItalic.woff") format("woff"), url("fonts/Aleo-BoldItalic.ttf") format("truetype"), url("fonts/Aleo-BoldItalic.svg#Aleo-BoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aleo";
+  src: url("fonts/Aleo-Light.eot");
+  src: url("fonts/Aleo-Light.eot?#iefix") format("embedded-opentype"), url("fonts/Aleo-Light.woff2") format("woff2"), url("fonts/Aleo-Light.woff") format("woff"), url("fonts/Aleo-Light.ttf") format("truetype"), url("fonts/Aleo-Light.svg#Aleo-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aleo";
+  src: url("fonts/Aleo-Regular.eot");
+  src: url("fonts/Aleo-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/Aleo-Regular.woff2") format("woff2"), url("fonts/Aleo-Regular.woff") format("woff"), url("fonts/Aleo-Regular.ttf") format("truetype"), url("fonts/Aleo-Regular.svg#Aleo-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.c-header {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+.c-header img {
+  margin-left: 3%;
+}
+@media (min-width: 1000px) {
+  .c-header__navbar {
+    margin-right: 3%;
+  }
+}
+.c-header__navbar ul {
+  padding: 0;
+  display: none;
+  list-style-type: none;
+}
+@media (min-width: 1000px) {
+  .c-header__navbar ul {
+    display: flex;
+  }
+}
+.c-header__navbar ul li {
+  margin-right: 25px;
+}
+.c-header__navbar ul li a {
+  font-family: "Arimo";
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 6px;
+}
+.c-header__navbar ul li a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  left: 0;
+  bottom: 0;
+  background-color: #fd0b0b;
+}
+.c-header__navbar ul li a.active::after {
+  width: 90%;
+}
+.c-header__navbar ul li a:hover::after {
+  width: 90%;
+}
+
+.c-hero {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  background-color: #000;
+}
+.c-hero video {
+  height: 100%;
+  max-height: 100%;
+}
+.c-hero figure {
+  margin: 0;
+  height: 100%;
+  max-height: 100%;
+}
+.c-hero figure img {
+  width: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  max-height: 100%;
+}
+@media (min-width: 1300px) {
+  .c-hero {
+    height: 80vh;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.c-banner {
+  padding: 15px;
+  margin-top: 30px;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+}
+@media (min-width: 768px) {
+  .c-banner {
+    margin-top: 50px;
+  }
+}
+@media (min-width: 1000px) {
+  .c-banner {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+.c-banner__wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media (min-width: 768px) {
+  .c-banner__wrapper {
+    flex-direction: row;
+  }
+}
+.c-banner figure {
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .c-banner figure {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 1000px) {
+  .c-banner figure {
+    flex-basis: 40%;
+  }
+}
+.c-banner figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-width: 100%;
+}
+.c-banner__text {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .c-banner__text {
+    margin-bottom: 30px;
+  }
+}
+.c-banner__text h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-family: "Aleo";
+  font-size: 20px;
+  line-height: 28px;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.c-banner__text h2:hover {
+  color: #fd0b0b;
+}
+@media (min-width: 768px) {
+  .c-banner__text h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+.c-banner__text p {
+  font-family: "Arimo";
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .c-banner__text p {
+    font-size: rem(20px);
+    line-height: rem(28px);
+  }
+}
+.c-banner__text .c-button {
+  margin-top: 30px;
+}
+@media (max-width: 767px) {
+  .c-banner__text .c-button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 768px) {
+  .c-banner__text .c-button {
+    margin-top: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .c-banner__text {
+    text-align: left;
+    align-self: center;
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 1000px) {
+  .c-banner__text {
+    flex-basis: 60%;
+    padding-left: 30px;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.c-button {
+  height: 50px;
+  font-family: "Aleo";
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  display: flex;
+  max-width: 300px;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 16px;
+}
+@media (min-width: 768px) {
+  .c-button {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+.c-button--primary {
+  background-color: #fff;
+  color: #fd0b0b;
+  border: 1px solid #fd0b0b;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.c-button--primary:hover {
+  background-color: #fd0b0b;
+  color: #fff;
+}
