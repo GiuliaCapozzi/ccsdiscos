@@ -1,0 +1,32 @@
+.c-footer {
+    padding-top: 30px;
+    background-color: $black;
+    margin-top: 30px;
+
+    @media (min-width:$md) {
+        margin-top: 50px;
+    }
+
+    img {
+        width: 200px;
+        margin-bottom: 30px;
+        @media (min-width: $md) {
+            width: 300px;
+        }
+        margin-left: auto;
+        display: block;
+        margin-right: auto;
+    }
+
+    &__text {
+        color: $white;
+        font-family: $font-primary;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        line-height: 14px;
+        margin: 0;
+        padding-bottom:30px;
+        padding-top: 10px;
+    }
+}

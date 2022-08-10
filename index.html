@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css"> 
+    <link rel="stylesheet" href="vendor/owl.carousel.min.css"> 
     <title>Ccs discos</title>
 </head>
 <body>
@@ -34,10 +35,176 @@
                 <div class="c-banner__text">
                     <h2>LP’S CCS LIMITED EDITIONS</h2>
                     <p>Es una idea que surge desde el sentimiento que nos mueve como coleccionistas de discos, considerando que en su momento mucha de la música producida no contó con una edición en formato Vinilo, y sabiendo la ilusión que, como a nosotros, le haría a muchos venezolanos poder contar con una discografía tan preciada en nuestra memoria y nuestros recuerdos. Es decir, el poder tener ese objeto físico como testimonio y símbolo de una época emblemática e inolvidable.</p>
-                    <a href="#" class="c-button c-button--primary">Ver todos los discos</a>
+                    <a href="#" class="c-button c-button--primary">Ver el catálogo</a>
                 </div>
             </div>
         </div>
+        <section class="c-owl">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/LACORTElps.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>La Corte ( Código Demente )</h3>
+                            <p class="c-carousel-item__label">Próximo lanzamiento</p>
+                            <a href="" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/LALECHElps.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>La Corte ( Código Demente )</h3>
+                            <p class="c-carousel-item__label">Próximo lanzamiento</p>
+                            <a href="" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/LCHEVYSlps.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>La Corte ( Código Demente )</h3>
+                            <p class="c-carousel-item__label">Próximo lanzamiento</p>
+                            <a href="" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/LCP1lps.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>La Corte ( Código Demente )</h3>
+                            <p class="c-carousel-item__label">Próximo lanzamiento</p>
+                            <a href="" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/LCP2lps.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>La Corte ( Código Demente )</h3>
+                            <p class="c-carousel-item__label">Próximo lanzamiento</p>
+                            <a href="" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/LEMERMlps.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>La Corte ( Código Demente )</h3>
+                            <p class="c-carousel-item__label">Próximo lanzamiento</p>
+                            <a href="" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/LMBPlps.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>La Corte ( Código Demente )</h3>
+                            <p class="c-carousel-item__label">Próximo lanzamiento</p>
+                            <a href="" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/PANlps.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>La Corte ( Código Demente )</h3>
+                            <p class="c-carousel-item__label">Próximo lanzamiento</p>
+                            <a href="" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="c-footer">
+                <img src="img/footer-logo-2.png" alt="">
+                <p class="c-footer__text">© 2022, LP'S CCS ( Limited Edition )</p>
+            </footer>
+        </section>
     </main>
+<script
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+crossorigin="anonymous"></script>
+<script src="vendor/owl.carousel.min.js"></script>
+<script>
+
+    function responsiveCarousel() {
+        let width = window.innerWidth;
+
+        if(width > 999) {
+            $('.owl-carousel').owlCarousel({
+            stagePadding: 50,
+            loop:true,
+            margin:15,
+            nav:false,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 1000,
+            autoplayHoverPause: true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:4
+                }
+            }
+            })
+        }else {
+            $('.owl-carousel').owlCarousel({
+            stagePadding: 50,
+            loop:true,
+            margin:15,
+            nav:false,
+            dots: true,
+            autoplay: false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:4
+                }
+            }
+            })
+        }
+    }
+
+    responsiveCarousel();
+
+    window.addEventListener('resize', function(){
+        $('.owl-carousel').trigger('destroy.owl.carousel');
+
+        responsiveCarousel();
+    })
+</script>
 </body>
 </html>
