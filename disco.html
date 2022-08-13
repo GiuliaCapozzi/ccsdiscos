@@ -81,7 +81,6 @@ crossorigin="anonymous"></script>
                     play[i].classList.add('playing');
                 }else {
                     video.pause();
-                    play[i].classList.remove('playing');
                 }
             } else {
                 video.setAttribute('src', dataPlay);
@@ -93,6 +92,28 @@ crossorigin="anonymous"></script>
             }
         }
     }
+
+        
+
+    function mobileMenu() {
+        let open = document.getElementsByClassName('js-open-mobile')[0];
+        let close = document.getElementsByClassName('js-close-mobile-menu')[0];
+        let mobileMenu = document.getElementsByClassName('js-menu')[0];
+
+        open.onclick=function(e) {
+            e.preventDefault();
+
+            mobileMenu.classList.add('active');
+
+            close.onclick=function(e) {
+                e.preventDefault();
+
+                mobileMenu.classList.remove('active');
+            }
+        }
+    }
+
+    mobileMenu();
 
     /*play.addEventListener('click', function(){
         if(video.paused) {
