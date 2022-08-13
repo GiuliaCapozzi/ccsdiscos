@@ -1,0 +1,95 @@
+.c-video-carousel {
+    display: inline-block;
+    &__thumbnail {
+        display: flex;
+        justify-content: center;
+        a {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            &:hover {
+                border: 5px solid $black;
+            }
+
+            &.playing {
+                border: 5px solid $black;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.c-disco-title {
+    font-size: 30px;
+    line-height: 38px;
+    font-family: $font-secondary;
+    margin-bottom: 30px;
+    margin-top: 0;
+
+    @media (min-width: $md) {
+        font-size: 40px;
+        line-height: 48px;
+    }
+}
+
+.c-disco-space {
+    margin-left: 3%;
+    margin-right: 3%;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    @media (min-width: $md) {
+        padding-top: 60px;
+    }
+
+    @media (max-width: $sm-max) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .c-artist-description {
+        padding:30px;
+        font-family: $font-primary;
+        p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 24px;
+
+            @media (min-width: $md) {
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
+
+        &__controls {
+            margin-top: 40px;
+        }
+    }
+    @media (min-width: $md) {
+        display: flex;
+        .c-video-carousel {
+            flex-basis: 40%;
+        }
+        .c-artist-description {
+            flex-basis: 60%;
+            align-self: flex-start;
+        }
+    }
+}
+
+
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+ }
+ 
+ @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+ }

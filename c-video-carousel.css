@@ -1,0 +1,17 @@
+.c-video-carousel {
+  height: 400px;
+  width: 100%;
+}
+.c-video-carousel__thumbnail {
+  display: flex;
+  justify-content: center;
+}
+.c-video-carousel__thumbnail a {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+.c-video-carousel__thumbnail a img {
+  width: 100%;
+  height: 100%;
+}

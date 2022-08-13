@@ -4,11 +4,38 @@
         margin-top: 50px;
     }
     .owl-stage {
-        height: 443px;
+        height: 480px;
         padding-top: 20px;
+        display: flex;
+
+        @media (min-width: $md) {
+            height: 430px;
+        }
 
         @media (min-width: $lg) {
-            height: 500px;
+            height: 480px;
+        }
+    }
+    .owl-dots {
+        @media (max-width: $sm-max) {
+            display: none;
+        }
+    }
+    @media (min-width: $lg) {
+        .owl-nav {
+            button {
+                position: absolute;
+                top: 30%;
+                font-size: 30px !important;
+                color: $red !important;
+            }
+    
+            .owl-prev {            
+                left: -20px;
+            }
+            .owl-next {
+                right: -20px;
+            }
         }
     }
     .owl-dots {

@@ -1,0 +1,134 @@
+.c-catalogue-carousel {
+    margin-left: 3%;
+    margin-right: 3%;
+
+    &__title {
+        letter-spacing: 1px;
+        text-align: center;
+        font-family: $font-secondary;
+        font-size: 28px;
+        line-height: 36px;
+
+        @media (min-width: $md) {
+            font-size: 48px;
+            line-height: 62px;
+        }
+    }
+
+    &__nav {
+        text-align: center;
+        margin-top: 30px;
+
+        @media (min-width: $md) {
+            margin-top: 60px;
+        }
+
+        a {
+            font-family: $font-primary;
+            text-decoration: none;
+            font-size: 16px;
+            line-height: 22px;
+            margin-right: 3%;
+            width: 30%;
+            display: inline-block;
+            vertical-align: middle;
+            color: $black;
+            transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+            &:hover {
+                color: $red;
+            }
+
+            &.active {
+                color: $red;
+            }
+
+            &:nth-last-of-type(1) {
+                margin-right: 0;
+            }
+
+            @media (min-width: $md) {
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
+    }
+
+    &__tab {
+        display: none;
+        margin-top: 30px;
+        @media (min-width: $md) {
+            margin-top: 60px;
+        }
+        .item {
+            @media (max-width: $sm-max) {
+                margin-bottom: 20px;
+            }
+
+            @media (min-width: $md) {
+                margin: 10px;
+                flex-basis: 20%;
+                .c-carousel-item__text h3 {
+                    height: 55px;
+
+                    @media (min-width: $md) and (max-width: $md-max) {
+                        height: 65px;
+                    }
+
+                    @media (min-width: $lg) {
+                        height: 55px;
+                    }
+                }
+            } 
+        }
+        &.visible {
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            display: block;
+            @media (min-width: $md) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+
+        &--evenly {
+            @media (min-width: $md) {                
+                justify-content: space-evenly;
+            }
+        }
+        &--start {
+            @media (min-width: $md) {
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    &__video {
+        display: none;
+        padding: 30px 0;
+        position: fixed;
+        top: 20px;
+        left: 10%;
+        right: 10%;
+        background: rgba(0,0,0,.8);
+        z-index: 4;
+        height: 80%;
+        width: 80%;
+
+        &.open {
+            display: block;
+        }
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+ }
+ 
+ @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+ }

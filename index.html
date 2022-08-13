@@ -10,20 +10,26 @@
 </head>
 <body>
     <header class="c-header">
-        <img src="img/logo.webp" alt="">
+        <a href="/" class="c-header__logo-link">
+            <img src="img/logo.webp" alt="">
+        </a>
         <nav class="c-header__navbar">
-            <ul>
-                <li> <a href="#" class="active"> Inicio </a></li>
+            <ul class="js-menu">
+                <li> <a href="#" class="js-close-mobile-menu">X</a></li>
+                <li> <a href="index.html" class="active"> Inicio </a></li>
                 <li> <a href="#"> Sobre nosotros </a></li>
-                <li><a href="#"> Catálogos </a></li>
+                <li><a href="catalogos.html"> Catálogos </a></li>
                 <li><a href="#"> Contacto  </a></li>
             </ul>
+            <a href="#" class="c-header__mobile-logo js-open-mobile">
+                <img src="img/m-mob-2.svg" alt="">
+            </a>
         </nav>
     </header>
     <main>
         <section class="c-hero">
             <video width="100%" controls="false" autoplay muted loop>
-                <source src="videos/fabrica.mp4" type="video/mp4">
+                <source src="videos/video-home-fabrica.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video> 
         </section>
@@ -35,93 +41,21 @@
                 <div class="c-banner__text">
                     <h2>LP’S CCS LIMITED EDITIONS</h2>
                     <p>Es una idea que surge desde el sentimiento que nos mueve como coleccionistas de discos, considerando que en su momento mucha de la música producida no contó con una edición en formato Vinilo, y sabiendo la ilusión que, como a nosotros, le haría a muchos venezolanos poder contar con una discografía tan preciada en nuestra memoria y nuestros recuerdos. Es decir, el poder tener ese objeto físico como testimonio y símbolo de una época emblemática e inolvidable.</p>
-                    <a href="#" class="c-button c-button--primary">Ver el catálogo</a>
+                    <a href="catalogos.html" class="c-button c-button--primary">Ver el catálogo</a>
                 </div>
             </div>
         </div>
         <section class="c-owl">
-            <div class="owl-carousel owl-theme">
-                <div class="item">
-                    <div class="c-carousel-item">
-                        <figure>
-                            <img src="img/discos/LACORTElps.jpg" alt="">
-                        </figure>
-                        <div class="c-carousel-item__text">
-                            <h3>La Corte ( Código Demente )</h3>
-                            <p class="c-carousel-item__label">Próximo lanzamiento</p>
-                            <a href="" class="c-button c-button--primary c-button--small">Ver más</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="owl-carousel owl-theme">   
                 <div class="item">
                     <div class="c-carousel-item">
                         <figure>
                             <img src="img/discos/LALECHElps.jpg" alt="">
                         </figure>
                         <div class="c-carousel-item__text">
-                            <h3>La Corte ( Código Demente )</h3>
-                            <p class="c-carousel-item__label">Próximo lanzamiento</p>
-                            <a href="" class="c-button c-button--primary c-button--small">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="c-carousel-item">
-                        <figure>
-                            <img src="img/discos/LCHEVYSlps.jpg" alt="">
-                        </figure>
-                        <div class="c-carousel-item__text">
-                            <h3>La Corte ( Código Demente )</h3>
-                            <p class="c-carousel-item__label">Próximo lanzamiento</p>
-                            <a href="" class="c-button c-button--primary c-button--small">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="c-carousel-item">
-                        <figure>
-                            <img src="img/discos/LCP1lps.jpg" alt="">
-                        </figure>
-                        <div class="c-carousel-item__text">
-                            <h3>La Corte ( Código Demente )</h3>
-                            <p class="c-carousel-item__label">Próximo lanzamiento</p>
-                            <a href="" class="c-button c-button--primary c-button--small">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="c-carousel-item">
-                        <figure>
-                            <img src="img/discos/LCP2lps.jpg" alt="">
-                        </figure>
-                        <div class="c-carousel-item__text">
-                            <h3>La Corte ( Código Demente )</h3>
-                            <p class="c-carousel-item__label">Próximo lanzamiento</p>
-                            <a href="" class="c-button c-button--primary c-button--small">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="c-carousel-item">
-                        <figure>
-                            <img src="img/discos/LEMERMlps.jpg" alt="">
-                        </figure>
-                        <div class="c-carousel-item__text">
-                            <h3>La Corte ( Código Demente )</h3>
-                            <p class="c-carousel-item__label">Próximo lanzamiento</p>
-                            <a href="" class="c-button c-button--primary c-button--small">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="c-carousel-item">
-                        <figure>
-                            <img src="img/discos/LMBPlps.jpg" alt="">
-                        </figure>
-                        <div class="c-carousel-item__text">
-                            <h3>La Corte ( Código Demente )</h3>
-                            <p class="c-carousel-item__label">Próximo lanzamiento</p>
-                            <a href="" class="c-button c-button--primary c-button--small">Ver más</a>
+                            <h3>La Leche ( 45 )</h3>
+                             
+                             <a href="disco.html" class="c-button c-button--primary c-button--small">Ver más</a>
                         </div>
                     </div>
                 </div>
@@ -131,18 +65,186 @@
                             <img src="img/discos/PANlps.jpg" alt="">
                         </figure>
                         <div class="c-carousel-item__text">
+                            <h3>Pan ( En vivo en el Teatro Nacional )</h3>
+                             
+                             <a href="disco.html" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/bacalao-01.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>Bacalao Men</h3>
+                             
+                             <a href="disco.html" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/bacalao-02.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>Bacalao Men ( El nuevo Bugalu )</h3>
+                             
+                             <a href="disco.html" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/deus-machina.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>La Muy Bestia Pop ( Deus ex Machina )</h3>
+                             
+                             <a href="disco.html" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/LACORTElps.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
                             <h3>La Corte ( Código Demente )</h3>
-                            <p class="c-carousel-item__label">Próximo lanzamiento</p>
-                            <a href="" class="c-button c-button--primary c-button--small">Ver más</a>
+                             
+                             <a href="disco.html" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/reciclaje.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>Reciclaje ( Excomulgado )</h3>
+                             
+                             <a href="disco.html" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/cremas-paraiso.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>Los Cremas Paraíso ( El debut )</h3>
+                             
+                             <a href="disco.html" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/de-pelicula.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>Los Cremas Paraíso ( De película )</h3>
+                             
+                             <a href="disco.html" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/kp9000.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>KP9000</h3>
+                             
+                             <a href="disco.html" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/como-kumbia.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>Babylon Motorhome ( Como Kumbia )</h3>
+                             
+                             <a href="disco.html" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/los-javelin.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>Los Javelin ( Surfabilly & Roll )</h3>
+                             
+                             <a href="disco.html" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/skin.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>Skin ( EDN )</h3>
+                             
+                             <a href="disco.html" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/le-merm.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>Le Merm ( Deep Chill Sessions )</h3>
+                             
+                             <a href="disco.html" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/los-chevynovas.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>Los Chevynovas ( Música en vara )</h3>
+                             
+                             <a href="disco.html" class="c-button c-button--primary c-button--small">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="c-carousel-item">
+                        <figure>
+                            <img src="img/discos/la-calle.jpg" alt="">
+                        </figure>
+                        <div class="c-carousel-item__text">
+                            <h3>La Calle ( ATC )</h3>
+                             
+                             <a href="disco.html" class="c-button c-button--primary c-button--small">Ver más</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <footer class="c-footer">
-                <img src="img/footer-logo-2.png" alt="">
-                <p class="c-footer__text">© 2022, LP'S CCS ( Limited Edition )</p>
-            </footer>
         </section>
+        <footer class="c-footer">
+            <img src="img/footer-logo-2.png" alt="">
+            <p class="c-footer__text">© 2022, LP'S CCS ( Limited Edition )</p>
+        </footer>
     </main>
 <script
 src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -187,8 +289,11 @@ crossorigin="anonymous"></script>
                 0:{
                     items:1
                 },
-                600:{
-                    items:3
+                470:{
+                    items:2
+                },
+                768: {
+                    items: 3
                 },
                 1000:{
                     items:4
@@ -198,7 +303,26 @@ crossorigin="anonymous"></script>
         }
     }
 
+    function mobileMenu() {
+        let open = document.getElementsByClassName('js-open-mobile')[0];
+        let close = document.getElementsByClassName('js-close-mobile-menu')[0];
+        let mobileMenu = document.getElementsByClassName('js-menu')[0];
+
+        open.onclick=function(e) {
+            e.preventDefault();
+
+            mobileMenu.classList.add('active');
+
+            close.onclick=function(e) {
+                e.preventDefault();
+
+                mobileMenu.classList.remove('active');
+            }
+        }
+    }
+
     responsiveCarousel();
+    mobileMenu();
 
     window.addEventListener('resize', function(){
         $('.owl-carousel').trigger('destroy.owl.carousel');

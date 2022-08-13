@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css"> 
+    <link rel="stylesheet" href="vendor/owl.carousel.min.css"> 
+    <title>Ccs LP</title>
+</head>
+<body>
+    <header class="c-header">
+        <a href="/" class="c-header__logo-link">
+            <img src="img/logo.webp" alt="">
+        </a>
+        <nav class="c-header__navbar">
+            <ul class="js-menu">
+                <li> <a href="#" class="js-close-mobile-menu">X</a></li>
+                <li> <a href="index.html"> Inicio </a></li>
+                <li> <a href="#"> Sobre nosotros </a></li>
+                <li><a href="catalogos.html"> Catálogos </a></li>
+                <li><a href="#"> Contacto  </a></li>
+            </ul>
+            <a href="#" class="c-header__mobile-logo js-open-mobile">
+                <img src="img/m-mob-2.svg" alt="">
+            </a>
+        </nav>
+    </header>
+    <main>
+        <div class="c-disco-space">
+            <section class="c-video-carousel">
+                <div class="c-video-carousel__video">                
+                    <video width="100%" height="400px" controls>
+                        <source src="videos/play/la-leche-01.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> 
+                </div>
+                <div class="c-video-carousel__thumbnails">
+                    <div class="c-video-carousel__thumbnail">
+                        <a href="#" data-play="videos/play/la-leche-01.mp4" class="c-video-carousel__thumb js-play-video-carousel playing"><img src="img/discos/LALECHElps.jpg" alt=""></a>
+                        <a href="#" data-play="videos/play/la-leche-02.mp4" class="c-video-carousel__thumb js-play-video-carousel"><img src="img/discos/LALECHElps.jpg" alt=""></a>
+                        <a href="#" data-play="videos/play/la-leche-clip-fabrica.mp4" class="c-video-carousel__thumb js-play-video-carousel"><img src="img/discos/LALECHElps.jpg" alt=""></a>
+                    </div>
+                </div>
+            </section>
+            <section class="c-artist-description">
+                <h1 class="c-disco-title">La Leche - Pan</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis totam odit, nihil nam numquam possimus. Dolor nulla perspiciatis adipisci saepe asperiores incidunt eum. Pariatur, voluptas perspiciatis reiciendis placeat suscipit aliquam?</p>
+                <div class="c-artist-description__controls">
+                    <a href="#" class="c-button c-button--primary">COMPRAR EN SHOPIFY</a>
+                </div>
+            </section>
+        </div>
+    </main>   
+    <footer class="c-footer">
+        <img src="img/footer-logo-3.jpg" alt="">
+        <p class="c-footer__text">© 2022, LP'S CCS ( Limited Edition )</p>
+    </footer>  
+<script
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+crossorigin="anonymous"></script>
+<script src="vendor/owl.carousel.min.js"></script>
+<script>
+    let video = document.getElementsByTagName('video')[0];
+    let play = document.getElementsByClassName('js-play-video-carousel');
+
+    for(let i = 0; i < play.length; i++) {
+
+        play[i].onclick=function(e) {
+            e.preventDefault();
+
+            
+            let dataPlay = play[i].getAttribute('data-play');
+            let actualVideoAttr = video.getAttribute('src');
+            if(dataPlay == actualVideoAttr) {
+                if(video.paused) {
+                    video.play();
+                    for(let k = 0; k < play.length; k++) {
+                        play[k].classList.remove('playing');
+                    }
+                    play[i].classList.add('playing');
+                }else {
+                    video.pause();
+                    play[i].classList.remove('playing');
+                }
+            } else {
+                video.setAttribute('src', dataPlay);
+                video.play();
+                for(let k = 0; k < play.length; k++) {
+                    play[k].classList.remove('playing');
+                }
+                play[i].classList.add('playing');
+            }
+        }
+    }
+
+    /*play.addEventListener('click', function(){
+        if(video.paused) {
+            video.play();
+            console.log(video.duration);
+        }else {
+            video.pause();
+        }
+    });*/
+</script>
+</body>
+</html>
